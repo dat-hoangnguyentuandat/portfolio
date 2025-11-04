@@ -1,14 +1,14 @@
 const config = {
-  title: "Naresh Khatri | Full-Stack Developer",
+  title: "Tuấn Đạt | Backend Developer",
   description: {
-    long: "Explore the portfolio of Naresh, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
+    long: "Explore the portfolio of Tuấn Đạt, a backend developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
     short:
-      "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
+      "Discover the portfolio of Tuấn Đạt, a backend developer creating interactive web experiences and innovative projects.",
   },
   keywords: [
-    "Naresh",
+    "Tuấn Đạt",
     "portfolio",
-    "full-stack developer",
+    "backend developer",
     "creative technologist",
     "web development",
     "3D animations",
@@ -23,19 +23,19 @@ const config = {
     "Spline",
     "Framer Motion",
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
-  site: "https://nareshkhatri.site",
+  author: "Tuấn Đạt",
+  email: "hoangdatlnbp@gmail.com",
+  site: "https://tuandat-portfolio.netlify.app",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
-    facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    twitter: "https://x.com/Kuro_0z4",
+    linkedin: "https://www.linkedin.com/in/đạt-hoàng-nguyễn-tuấn-776b99329",
+    instagram: "https://www.instagram.com/tuandatlnbp",
+    facebook: "https://www.facebook.com/hoangdatlnbp",
+    github: "https://github.com/dat-hoangnguyentuandat",
   },
 };
 export { config };
