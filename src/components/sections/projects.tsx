@@ -30,8 +30,8 @@ const ProjectsSection = () => {
         </h2>
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-3">
-        {projects.map((project, index) => (
-          <Modall key={project.src} project={project} />
+        {projects.map((project) => (
+          <Modall key={project.id} project={project} />
         ))}
       </div>
     </section>
@@ -87,30 +87,56 @@ const Modall = ({ project }: { project: Project }) => {
 export default ProjectsSection;
 
 const ProjectContents = ({ project }: { project: Project }) => {
-  return (
-    <>
-      <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-        {project.title}
-      </h4>
-      <div className="flex flex-col md:flex-row md:justify-evenly max-w-screen overflow-hidden md:overflow-visible">
-        <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
-          <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
-            Frontend
-          </p>
-          {project.skills.frontend?.length > 0 && (
-            <FloatingDock items={project.skills.frontend} />
-          )}
-        </div>
-        {project.skills.backend?.length > 0 && (
-          <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
-            <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
-              Backend
-            </p>
-            <FloatingDock items={project.skills.backend} />
-          </div>
-        )}
-      </div>
-      {project.content}
-    </>
+  return React.createElement(
+    React.Fragment,
+    null,
+    // Project Name
+    React.createElement(
+      "h4",
+      { className: "text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8" },
+      project.title
+    ),
+    // Main Project Image
+    React.createElement(
+      "div",
+      { className: "flex justify-center mb-8" },
+      React.createElement("img", {
+        src: project.src,
+        alt: project.title,
+        className: "rounded-lg object-cover max-w-full h-auto",
+        style: { maxHeight: "300px" }
+      })
+    ),
+    // Project Screenshots
+    React.createElement(
+      "div",
+      { className: "flex flex-wrap justify-center gap-4 mb-8" },
+      project.screenshots.map((screenshot, index) => 
+        React.createElement(
+          "div",
+          { key: index, className: "w-32 h-24 rounded overflow-hidden" },
+          React.createElement("img", {
+            src: `/assets/projects-screenshots/${project.id}/${screenshot}`,
+            alt: `${project.title} screenshot ${index + 1}`,
+            className: "w-full h-full object-cover"
+          })
+        )
+      )
+    ),
+    // Project Link
+    React.createElement(
+      "div",
+      { className: "flex justify-center" },
+      React.createElement(
+        "a",
+        { 
+          href: project.live, 
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-md"
+        },
+        "Visit Project"
+      )
+    )
   );
 };
