@@ -81,11 +81,11 @@ const ProjectContents = ({ project }: { project: Project }) => {
   // Determine which specific image to show based on project ID
   let specificImageSrc = "";
   if (project.id === "codingducks") {
-    specificImageSrc = "/assets/projects-screenshots/codingducks/project_1.png";
+    specificImageSrc = "/assets/projects-screenshots/TuTien/project_1.png";
   } else if (project.id === "couponluxury") {
-    specificImageSrc = "/assets/projects-screenshots/couponluxury/project_2.png";
+    specificImageSrc = "/assets/projects-screenshots/Metaball/project_2.png";
   } else if (project.id === "ghostchat") {
-    specificImageSrc = "/assets/projects-screenshots/ghostchat/project_3.png";
+    specificImageSrc = "/assets/projects-screenshots/Chatbot/project_3.png";
   }
 
   return React.createElement(
