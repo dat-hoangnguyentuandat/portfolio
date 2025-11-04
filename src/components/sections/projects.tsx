@@ -87,6 +87,16 @@ const Modall = ({ project }: { project: Project }) => {
 export default ProjectsSection;
 
 const ProjectContents = ({ project }: { project: Project }) => {
+  // Determine which specific image to show based on project ID
+  let specificImageSrc = "";
+  if (project.id === "codingducks") {
+    specificImageSrc = "/assets/projects-screenshots/codingducks/project_1.png";
+  } else if (project.id === "couponluxury") {
+    specificImageSrc = "/assets/projects-screenshots/couponluxury/project_2.png";
+  } else if (project.id === "ghostchat") {
+    specificImageSrc = "/assets/projects-screenshots/ghostchat/project_3.png";
+  }
+
   return React.createElement(
     React.Fragment,
     null,
@@ -96,32 +106,16 @@ const ProjectContents = ({ project }: { project: Project }) => {
       { className: "text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8" },
       project.title
     ),
-    // Main Project Image
+    // Specific Project Image
     React.createElement(
       "div",
       { className: "flex justify-center mb-8" },
       React.createElement("img", {
-        src: project.src,
+        src: specificImageSrc,
         alt: project.title,
         className: "rounded-lg object-cover max-w-full h-auto",
         style: { maxHeight: "300px" }
       })
-    ),
-    // Project Screenshots
-    React.createElement(
-      "div",
-      { className: "flex flex-wrap justify-center gap-4 mb-8" },
-      project.screenshots.map((screenshot, index) => 
-        React.createElement(
-          "div",
-          { key: index, className: "w-32 h-24 rounded overflow-hidden" },
-          React.createElement("img", {
-            src: `/assets/projects-screenshots/${project.id}/${screenshot}`,
-            alt: `${project.title} screenshot ${index + 1}`,
-            className: "w-full h-full object-cover"
-          })
-        )
-      )
     ),
     // Project Link
     React.createElement(
