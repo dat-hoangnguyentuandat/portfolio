@@ -3,15 +3,21 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
   email: z.string().email({ message: "Email is invalid!" }),
   message: z.string().min(10, "Message is too short!"),
 });
+
 export async function POST(req: Request) {
   try {
+    // Create Resend client inside the handler to avoid instantiation during build
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (!resendApiKey) {
+      return new Response("Missing RESEND_API_KEY environment variable", { status: 500 });
+    }
+    const resend = new Resend(resendApiKey);
+
     const body = await req.json();
     console.log(body);
     const {
