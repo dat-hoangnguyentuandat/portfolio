@@ -19,10 +19,10 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    id: "codingducks",
+    id: "tutien",
     category: "Coding platform",
-    title: "Coding Ducks",
-    src: "/assets/projects-screenshots/codingducks/project_1.png",
+    title: "TuTien",
+    src: "/assets/projects-screenshots/TuTien/project_1.png",
     screenshots: ["project_1.png"],
     skills: {
       frontend: [
@@ -41,17 +41,17 @@ const projects: Project[] = [
         { title: "Socket.io", bg: "black", fg: "white", icon: "Socket.io" },
       ],
     },
-    live: "https://www.codingducks.xyz/",
-    github: "https://github.com/Naresh-Khatri/Coding-Ducks",
+    live: "https://vangioinguyenkhoi.qzz.io",
+    github: "https://github.com/dat-hoangnguyentuandat/TuTien",
     content: null,
   },
   {
-    id: "couponluxury",
+    id: "metaball",
     category: "Coupon site",
-    title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/project_2.png",
+    title: "Metaball",
+    src: "/assets/projects-screenshots/Metaball/project_2.png",
     screenshots: ["project_2.png"],
-    live: "https://www.couponluxury.com/",
+    live: "https://rainbow-gumption-9a9ea2.netlify.app",
     skills: {
       frontend: [
         { title: "JavaScript", bg: "black", fg: "white", icon: "JS" },
@@ -70,13 +70,13 @@ const projects: Project[] = [
     content: null,
   },
   {
-    id: "ghostchat",
+    id: "chatbot",
     category: "Anonymous chat",
-    title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/project_3.png",
+    title: "Chatbot",
+    src: "/assets/projects-screenshots/Chatbot/project_3.png",
     screenshots: ["project_3.png"],
-    live: "https://ghostchat.vercel.app",
-    github:"https://github.com/Naresh-Khatri/GhostChat",
+    live: "https://ai-assistant-tdat.netlify.app",
+    github:"https://github.com/dat-hoangnguyentuandat/AI-Assistant",
     skills: {
       frontend: [
         { title: "JavaScript", bg: "black", fg: "white", icon: "JS" },
