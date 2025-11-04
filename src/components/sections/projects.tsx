@@ -80,11 +80,11 @@ export default ProjectsSection;
 const ProjectContents = ({ project }: { project: Project }) => {
   // Determine which specific image to show based on project ID
   let specificImageSrc = "";
-  if (project.id === "TuTien") {
+  if (project.id === "tutien") {
     specificImageSrc = "/assets/projects-screenshots/TuTien/project_1.png";
-  } else if (project.id === "Metaball") {
+  } else if (project.id === "metaball") {
     specificImageSrc = "/assets/projects-screenshots/Metaball/project_2.png";
-  } else if (project.id === "Chatbot") {
+  } else if (project.id === "chatbot") {
     specificImageSrc = "/assets/projects-screenshots/Chatbot/project_3.png";
   }
 
