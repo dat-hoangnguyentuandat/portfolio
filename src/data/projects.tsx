@@ -22,8 +22,8 @@ const projects: Project[] = [
     id: "codingducks",
     category: "Coding platform",
     title: "Coding Ducks",
-    src: "/assets/projects-screenshots/codingducks/landing.png",
-    screenshots: ["landing.png"],
+    src: "/assets/projects-screenshots/codingducks/project_1.png",
+    screenshots: ["project_1.png"],
     skills: {
       frontend: [
         { title: "TypeScript", bg: "black", fg: "white", icon: "TS" },
@@ -49,8 +49,8 @@ const projects: Project[] = [
     id: "couponluxury",
     category: "Coupon site",
     title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/landing.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
+    src: "/assets/projects-screenshots/couponluxury/project_2.png",
+    screenshots: ["project_2.png"],
     live: "https://www.couponluxury.com/",
     skills: {
       frontend: [
@@ -73,8 +73,8 @@ const projects: Project[] = [
     id: "ghostchat",
     category: "Anonymous chat",
     title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
+    src: "/assets/projects-screenshots/ghostchat/project_3.png",
+    screenshots: ["project_3.png"],
     live: "https://ghostchat.vercel.app",
     github:"https://github.com/Naresh-Khatri/GhostChat",
     skills: {
